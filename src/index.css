@@ -1,0 +1,139 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --midnight: #0E1117;
+    --gold: #D4AF37;
+    --gold-soft: #F1D77A;
+    --royal-purple: #2C183B;
+    --crimson: #7A1E2E;
+    --parchment: #F9F8F6;
+    --ink: #1B1B22;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--midnight);
+    color: var(--parchment);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-cinzel {
+    font-family: 'Cinzel', Georgia, serif;
+    letter-spacing: 0.02em;
+  }
+}
+
+/* Custom magical utilities */
+.text-gold {
+  color: var(--gold);
+}
+.text-gold-soft {
+  color: var(--gold-soft);
+}
+.bg-midnight {
+  background-color: var(--midnight);
+}
+.bg-royal-purple {
+  background-color: var(--royal-purple);
+}
+.bg-crimson {
+  background-color: var(--crimson);
+}
+.bg-parchment {
+  background-color: var(--parchment);
+}
+.border-gold {
+  border-color: var(--gold);
+}
+.border-gold-soft {
+  border-color: var(--gold-soft);
+}
+
+/* Gold foil gradient buttons & borders */
+.gold-gradient-btn {
+  background: linear-gradient(135deg, #D4AF37 0%, #F1D77A 50%, #B89728 100%);
+  color: #0E1117;
+  font-weight: 600;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.25);
+}
+
+.gold-gradient-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 28px rgba(212, 175, 55, 0.45);
+  filter: brightness(1.06);
+}
+
+.gold-outline-btn {
+  border: 1px solid rgba(212, 175, 55, 0.5);
+  color: #F1D77A;
+  background: rgba(14, 17, 23, 0.6);
+  backdrop-filter: blur(8px);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gold-outline-btn:hover {
+  border-color: #F1D77A;
+  background: rgba(212, 175, 55, 0.12);
+  color: #FFF;
+  transform: translateY(-2px);
+}
+
+/* Glassmorphism card */
+.glass-card {
+  background: rgba(26, 21, 37, 0.65);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(212, 175, 55, 0.18);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+.glass-card-hover {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card-hover:hover {
+  transform: translateY(-4px);
+  border-color: rgba(212, 175, 55, 0.55);
+  box-shadow: 0 16px 40px -10px rgba(212, 175, 55, 0.18), 0 0 20px rgba(212, 175, 55, 0.1);
+}
+
+/* Marquee infinite scroll */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Paper grain texture simulation */
+.parchment-pattern {
+  background-color: #F9F8F6;
+  background-image: radial-gradient(#D4AF37 0.5px, transparent 0.5px), radial-gradient(#1B1B22 0.3px, #F9F8F6 0.3px);
+  background-size: 24px 24px;
+  background-position: 0 0, 12px 12px;
+}
+
+/* Candle glow radial */
+.candle-glow {
+  background: radial-gradient(circle at 50% 30%, rgba(241, 215, 122, 0.14) 0%, rgba(44, 24, 59, 0.35) 45%, transparent 70%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none;
+  }
+  .gold-gradient-btn:hover,
+  .gold-outline-btn:hover,
+  .glass-card-hover:hover {
+    transform: none;
+  }
+}

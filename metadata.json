@@ -1,0 +1,6 @@
+{
+  "name": "Wizard Market",
+  "description": "Toronto's premier realm of magic and wonder. Specialty boutique for handcrafted wands, grimoires, potions, and fantasy collectibles at 346B Dundas St W.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

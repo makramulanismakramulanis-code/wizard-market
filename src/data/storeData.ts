@@ -1,35 +1,42 @@
 import { Product, Category, Review } from '../types';
 
-export const HERO_IMAGE = '/src/assets/images/hero_wizard_market_1792343576385.jpg';
-export const STORE_INTERIOR_IMAGE = '/src/assets/images/store_interior_haven_1792343579476.jpg';
+import heroImg from '../assets/images/hero_wizard_market_1792343576385.jpg';
+import storeInteriorImg from '../assets/images/store_interior_haven_1792343579476.jpg';
+import catWandsImg from '../assets/images/cat_wands_artifacts_1792343577163.jpg';
+import catApparelImg from '../assets/images/cat_apparel_gear_1792343578208.jpg';
+import catBooksImg from '../assets/images/cat_books_seals_1792343578948.jpg';
+import catPotionsImg from '../assets/images/cat_potions_decor_1792343579089.jpg';
+
+export const HERO_IMAGE = heroImg;
+export const STORE_INTERIOR_IMAGE = storeInteriorImg;
 
 export const CATEGORIES: Category[] = [
   {
     id: 'wands',
     name: 'Wands & Collectibles',
     description: 'Handcrafted elder wood spell wands, obsidian figurines, and authentic collector display pieces.',
-    image: '/src/assets/images/cat_wands_artifacts_1792343577163.jpg',
+    image: catWandsImg,
     itemsCount: '28 items',
   },
   {
     id: 'apparel',
     name: 'Apparel & House Gear',
     description: 'Heavyweight knit scarves, ceremonial cloaks, enameled crest pins, and collegiate house accessories.',
-    image: '/src/assets/images/cat_apparel_gear_1792343578208.jpg',
+    image: catApparelImg,
     itemsCount: '34 items',
   },
   {
     id: 'books',
     name: 'Books, Stationery & Seals',
     description: 'Gilded spellbound journals, hand-carved brass wax seal stamps, deep crimson wax, and calligraphy quills.',
-    image: '/src/assets/images/cat_books_seals_1792343578948.jpg',
+    image: catBooksImg,
     itemsCount: '45 items',
   },
   {
     id: 'decor',
     name: 'Home Decor & Gifts',
     description: 'Luminescent starlight potion lamps, beeswax taper candles, apothecary vials, and framed magical lore.',
-    image: '/src/assets/images/cat_potions_decor_1792343579089.jpg',
+    image: catPotionsImg,
     itemsCount: '52 items',
   },
 ];
@@ -42,7 +49,7 @@ export const BESTSELLERS: Product[] = [
     priceCad: 54.99,
     rating: 5.0,
     reviewCount: 42,
-    image: '/src/assets/images/cat_wands_artifacts_1792343577163.jpg',
+    image: catWandsImg,
     shortDescription: 'Ontario fallen elder wood with rune engravings and moonstone pommel.',
     longDescription: 'Turned and hand-carved from seasoned Ontario elder wood gathered from natural deadfall. Each piece features celestial Elder Futhark rune engravings, solid brass filigree accents, and a natural iridescent moonstone pommel cabochon. Balanced for ceremonial display.',
     inStock: true,
@@ -55,7 +62,7 @@ export const BESTSELLERS: Product[] = [
     priceCad: 39.99,
     rating: 5.0,
     reviewCount: 58,
-    image: '/src/assets/images/cat_potions_decor_1792343579089.jpg',
+    image: catPotionsImg,
     shortDescription: 'Ambient starlight glass flacon with glowing mineral luminescent swirl.',
     longDescription: 'A heavy faceted apothecary flask sealed with dark dripping wax and ornate bronze filigree. Filled with safe, non-toxic fluid containing suspended mica minerals that illuminate in ambient teal and warm amber when switched on. Powered by a hidden rechargeable USB-C LED base.',
     inStock: true,
@@ -68,7 +75,7 @@ export const BESTSELLERS: Product[] = [
     priceCad: 29.99,
     rating: 5.0,
     reviewCount: 31,
-    image: '/src/assets/images/cat_books_seals_1792343578948.jpg',
+    image: catBooksImg,
     shortDescription: 'Solid brass seal stamp, 3 wax sticks, melting brass ladle, and parchment.',
     longDescription: 'Everything needed to seal private correspondence with medieval grandeur. Features an engraved brass stamp head mounted to a polished turned rosewood handle, three flexible sealing wax sticks in Deep Burgundy, Antique Gold, and Forest Emerald, plus a brass melting spoon.',
     inStock: true,
@@ -81,7 +88,7 @@ export const BESTSELLERS: Product[] = [
     priceCad: 34.99,
     rating: 5.0,
     reviewCount: 64,
-    image: '/src/assets/images/cat_apparel_gear_1792343578208.jpg',
+    image: catApparelImg,
     shortDescription: 'Heavyweight merino-blend knit scarf with cast bronze crest pin.',
     longDescription: 'Knitted from a dense, warm 60% merino wool and 40% soft acrylic blend for comfort without itch. Features bold heritage alternating stripes in Crimson and Golden Ochre with fringed ends. Each scarf comes packaged with a die-cast antique bronze house emblem clasp.',
     inStock: true,
@@ -94,7 +101,7 @@ export const BESTSELLERS: Product[] = [
     priceCad: 48.00,
     rating: 5.0,
     reviewCount: 29,
-    image: '/src/assets/images/cat_books_seals_1792343578948.jpg',
+    image: catBooksImg,
     shortDescription: 'Gilded embossed full-grain leather journal with deckle-edge tea-stained pages.',
     longDescription: 'Bound in supple vintage distressed brown saddle leather with gold foil astronomical charts stamped into the cover. Contains 240 blank unlined pages made from recycled cotton rag parchment that gracefully accepts fountain pen ink and watercolor washes.',
     inStock: true,
@@ -107,7 +114,7 @@ export const BESTSELLERS: Product[] = [
     priceCad: 62.50,
     rating: 4.9,
     reviewCount: 23,
-    image: '/src/assets/images/cat_wands_artifacts_1792343577163.jpg',
+    image: catWandsImg,
     shortDescription: 'Working rotary brass astrolabe instrument with zodiac coordinate rings.',
     longDescription: 'A functional reproduction of Renaissance navigational instruments. Cast in solid brushed brass with dual rotating planispheres, celestial longitude coordinate rings, and an integrated magnetic fluid compass in the center. An exquisite centerpiece for any desk or library.',
     inStock: true,
